@@ -88,7 +88,15 @@ function addRecordHandler() {
     return;
   }
 
+  if (isNaN(salary)) {
+    alert('provide a valid salary range');
+    return;
+  }
+
   addRecord(name, salary);
+
+  document.getElementById('name').value = '';
+  document.getElementById('salary').value = '';
 }
 
 function addRecord(name, salary) {
